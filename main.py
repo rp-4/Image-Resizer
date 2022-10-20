@@ -34,19 +34,19 @@ def convertImg(imageURL, reduce):
         outputPath = imageURL.replace(".png","-converted.png")
     else:
         return 0
-    print(imageURL)
-    
+        
     img = Image.open(imageURL)
 
     width, height = img.size
 
-    print(width,height)
+    print(width,height, end="----New Size: ")
 
     per = 100/reduce
 
     width = int(width/per)
-
     height = int(height/per)
+    
+    print(width,height)
 
     newsize = (width, height)
     img1 = img.resize(newsize)
