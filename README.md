@@ -10,7 +10,7 @@ A simple python script to resize images
 <h4>Library used:<p>
  
  - Image Library: <a href="https://pypi.org/project/Pillow/">Pillow</a><p>
- - System: os (inbuilt)
+ - System: <a href="https://docs.python.org/3/library/os.html">os (inbuilt)</a>
 
 
 <h4>ToDo:<p>
