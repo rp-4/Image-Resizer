@@ -1,30 +1,59 @@
 import time
 import pyautogui
 from PIL import Image
+import os
 
 st = time.time()
 #############################################
 
-path = "image.jpeg"
-outputPath = "output path"
-img = Image.open(path)
+def main():
+    
+    path = input("Enter image folder path: ").strip()
+    reduce = float(input("Enter percentage you want to reduce: "))
+    
+    imageURL = get_indi_file(path)
+    for img in imageURL:
+        convertImg(img, reduce)
 
-width, height = img.size
+def get_indi_file(path):
+    allFiles = []
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            fullFileName = root+"\\"+file
+            allFiles.append(fullFileName)
+    return allFiles
 
-print(width,height)
 
-reduce = float(input("Enter percentage you want to reduce: "))
+def convertImg(imageURL, reduce):
+    
+    if imageURL.find(".jpeg") >= 0:
+        outputPath = imageURL.replace(".jpeg","-converted.jpeg")
+    elif imageURL.find(".jpg") >= 0:
+        outputPath = imageURL.replace(".jpg","-converted.jpg")
+    elif imageURL.find(".png") >= 0:
+        outputPath = imageURL.replace(".png","-converted.png")
+    else:
+        return 0
+    print(imageURL)
+    
+    img = Image.open(imageURL)
 
-per = 100/reduce
+    width, height = img.size
 
-width = int(width/per)
+    print(width,height)
 
-height = int(height/per)
+    per = 100/reduce
 
-newsize = (width, height)
-img1 = img.resize(newsize)
+    width = int(width/per)
 
-img1 = img1.save(outputPath, quality=90, dpi=(300,300))
+    height = int(height/per)
+
+    newsize = (width, height)
+    img1 = img.resize(newsize)
+
+    img1 = img1.save(outputPath, quality=90, dpi=(300,300))
+    
+main()
 
 
 #############################################
