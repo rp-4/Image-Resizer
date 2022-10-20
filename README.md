@@ -1,5 +1,5 @@
 # Image-Resizer
-A simple python script to resize image
+A simple python script to resize images
 
 - A user has to enter directoy path which has images to convert. 
 - All converted images will be saved in the same directory with <em>-converted</em> extention.
