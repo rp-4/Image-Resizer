@@ -6,6 +6,13 @@ A simple python script to resize images
 - Default <b>quality = 90 </b> which can be changed in the code.
 - Default <b>dpi - Dots per inch is 300,300 </b> which can be changed in the code.
 
+
+<h4>Library used:<p>
+ 
+ - Image Library: <a href="https://pypi.org/project/Pillow/">Pillow</a><p>
+ - System: os (inbuilt)
+
+
 <h4>ToDo:<p>
  
  - UI<p>
