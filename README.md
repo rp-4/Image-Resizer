@@ -10,7 +10,7 @@ A simple python script to resize images
  
  - UI<p>
  - Single File<p>
- - Manually set quality and dpi<p> 
+ - Manually able to set quality and dpi<p> 
  - Rename before save<p>
  - Changeable Output directory<p></h4>
 
