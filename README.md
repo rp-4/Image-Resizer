@@ -1,2 +1,22 @@
 # Image-Resizer
 A simple python script to resize image
+
+- A user has to enter directoy path which has images to convert. 
+- All converted images will be saved in the same directory with <em>-converted</em> extention.
+- Default <b>quality = 90 </b> which can be changed in the code.
+- Default <b>dpi - Dots per inch is 300,300 </b> which can be changed in the code.
+
+<h4>ToDo:<p>
+ 
+ - UI<p>
+ - Single File<p>
+ - Manually set quality and dpi<p> 
+ - Rename before save<p>
+ - Changeable Output directory<p></h4>
+
+
+
+
+<h3>Note: Only <em>.jpeg, .jpg and .png </em> image format supported, however you can help yourself by changing the code to accomodate wide range of formates.</h3>
+
+
