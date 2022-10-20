@@ -1,5 +1,4 @@
 import time
-import pyautogui
 from PIL import Image
 import os
 
